@@ -1,0 +1,13 @@
+streamlit
+langchain_groq 
+langchain_community 
+pypdf 
+sentence_transformers
+python-dotenv
+chromadb==0.4.24
+transformers
+numpy==1.26.4
+
+protobuf==3.20.3
+
+

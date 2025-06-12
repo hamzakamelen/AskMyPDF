@@ -1,0 +1,4 @@
+.env
+rag_botenv
+chroma_store
+local_models
