@@ -17,7 +17,8 @@ def create_vector_store(uploaded_files):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
     text = text_splitter.split_documents(docs)
     
-    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L12-v2")
+    # embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L12-v2")
+    embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
     
     if os.path.exists(PERSIST_DIR) and os.listdir(PERSIST_DIR):
         vector_store = Chroma(persist_directory=PERSIST_DIR, embedding_function=embeddings)
