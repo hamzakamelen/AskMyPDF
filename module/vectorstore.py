@@ -22,9 +22,10 @@ def create_vector_store(uploaded_files):
     
     if os.path.exists(PERSIST_DIR) and os.listdir(PERSIST_DIR):
         vector_store = Chroma(persist_directory=PERSIST_DIR, embedding_function=embeddings)
-        # vector_store.add_documents(text)
-        # vector_store.persist()
-    else:
-        vector_store = Chroma.from_documents(text, embeddings, persist_directory=PERSIST_DIR)
+        vector_store.add_documents(text)
         vector_store.persist()
+    else:
+        pass
+        # vector_store = Chroma.from_documents(text, embeddings, persist_directory=PERSIST_DIR)
+        # vector_store.persist()
     return vector_store 
