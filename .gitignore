@@ -1,4 +1,4 @@
 .env
 rag_botenv
-chroma_store
+# chroma_store
 local_models
